@@ -232,7 +232,42 @@
   footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
   footer a:hover{color:var(--amber)}
 
+  /* PORTRAIT */
+  .portrait{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--line);margin-bottom:20px;aspect-ratio:1/1;background:var(--surface-2)}
+  .portrait img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.25) contrast(1.05);transition:transform .9s var(--ease),filter .6s}
+  .portrait:hover img{transform:scale(1.06);filter:grayscale(0) contrast(1)}
+  .portrait::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(10,10,13,.55));pointer-events:none}
+  .portrait .tagp{position:absolute;left:16px;bottom:14px;z-index:2;font-family:"JetBrains Mono";font-size:.72rem;letter-spacing:.12em;color:var(--amber-soft);display:flex;align-items:center;gap:.5em}
+  .portrait .tagp .dot{width:7px;height:7px;border-radius:50%;background:var(--mint);box-shadow:0 0 9px var(--mint)}
+  .portrait .corner{position:absolute;top:12px;right:12px;z-index:2;width:34px;height:34px;border-top:2px solid var(--amber);border-right:2px solid var(--amber);opacity:.8}
+
+  /* ASK ME — chat */
+  .ask-wrap{max-width:760px;margin:0 auto}
+  .chat{background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+  .chat-top{display:flex;align-items:center;gap:12px;padding:16px 20px;background:var(--surface-2);border-bottom:1px solid var(--line)}
+  .chat-top .av{width:38px;height:38px;border-radius:50%;object-fit:cover;border:1px solid var(--line-strong)}
+  .chat-top .who b{font-family:"Bricolage Grotesque";font-weight:700;display:block;font-size:.98rem}
+  .chat-top .who span{font-family:"JetBrains Mono";font-size:.68rem;color:var(--mint);letter-spacing:.1em}
+  .chat-log{padding:24px 20px;display:flex;flex-direction:column;gap:14px;min-height:230px;max-height:420px;overflow-y:auto;scroll-behavior:smooth}
+  .bubble{max-width:78%;padding:12px 16px;border-radius:16px;font-size:.96rem;line-height:1.5;animation:pop .4s var(--ease)}
+  .bubble.q{align-self:flex-end;background:var(--amber);color:#10110a;border-bottom-right-radius:5px;font-weight:600}
+  .bubble.a{align-self:flex-start;background:var(--surface-2);border:1px solid var(--line);border-bottom-left-radius:5px}
+  .bubble.typing{align-self:flex-start;display:flex;gap:5px;padding:16px}
+  .bubble.typing i{width:7px;height:7px;border-radius:50%;background:var(--faint);animation:blink 1.2s infinite}
+  .bubble.typing i:nth-child(2){animation-delay:.2s}.bubble.typing i:nth-child(3){animation-delay:.4s}
+  @keyframes blink{0%,60%,100%{opacity:.3}30%{opacity:1}}
+  @keyframes pop{from{opacity:0;transform:translateY(10px) scale(.97)}to{opacity:1;transform:none}}
+  .chat-asks{display:flex;flex-wrap:wrap;gap:9px;padding:16px 20px;border-top:1px solid var(--line);background:var(--bg-2)}
+  .qchip{font-family:"JetBrains Mono";font-size:.76rem;padding:8px 14px;border:1px solid var(--line-strong);border-radius:99px;color:var(--muted);cursor:pointer;transition:.25s;background:none}
+  .qchip:hover{border-color:var(--amber);color:var(--amber);transform:translateY(-2px)}
+  .qchip:disabled{opacity:.35;cursor:default;transform:none}
+
+  /* contact cards */
+  .contact .links .btn .ic{font-family:"JetBrains Mono";font-weight:700}
+
+  @media print{nav,.scroll-hint,.glow,.progress{display:none}}
   @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}.hero h1 .ln span{transform:none}}
+</style>
 </style>
 </head>
 <body>
@@ -249,7 +284,9 @@
       <a href="#stack">Stack</a>
       <a href="#work">Work</a>
       <a href="#achievements">Achievements</a>
-      <a class="nav-cta" href="https://github.com/3bbasDev" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="#ask">Ask</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-cta" href="cv.html" target="_blank" rel="noopener">Download CV ↓</a>
     </div>
   </div>
 </nav>
@@ -265,7 +302,7 @@
     <p class="lede">I architect <b>distributed backends</b> — .NET microservices, real-time systems, and ML pipelines that hold up under load. <b>“Even when I lose, I'm winning.”</b></p>
     <div class="hero-actions">
       <a class="btn btn--primary" href="#work">View selected work <span>→</span></a>
-      <a class="btn btn--ghost" href="#contact">Get in touch</a>
+      <a class="btn btn--ghost" href="cv.html" target="_blank" rel="noopener">Download CV ↓</a>
     </div>
     <div class="hero-meta">
       <div class="m"><b data-count="8">0</b><span>yrs on GitHub</span></div>
@@ -286,6 +323,11 @@
         <p class="body">Since 2017 I've been shipping production .NET backends: multi-tenant platforms, real-time WebSocket services, Elasticsearch-powered search, and ML.NET pipelines. I care about clean boundaries, predictable deployments, and code that the next engineer can actually read.</p>
       </div>
       <div class="reveal" data-d="2">
+        <div class="portrait">
+          <span class="corner"></span>
+          <img src="assets/abbas.jpg" alt="Abbas Radam" loading="lazy" />
+          <span class="tagp"><span class="dot"></span>Abbas Radam · Baghdad</span>
+        </div>
         <div class="idcard">
           <div class="dots"><i></i><i></i><i></i></div>
           <div class="row"><span class="k">handle</span><span class="v">@3bbasDev</span></div>
@@ -450,6 +492,28 @@
   </div>
 </section>
 
+<section id="ask">
+  <div class="wrap">
+    <div class="shead reveal" style="text-align:center;margin-left:auto;margin-right:auto">
+      <span class="mono eyebrow" style="justify-content:center;display:inline-flex">/ ask me anything</span>
+      <h2 class="display">Got a question? Ask.</h2>
+      <p>Tap a question — I've pre-answered the ones I get most.</p>
+    </div>
+    <div class="ask-wrap reveal" data-d="1">
+      <div class="chat">
+        <div class="chat-top">
+          <img class="av" src="assets/abbas.jpg" alt="Abbas" />
+          <div class="who"><b>Abbas Radam</b><span>● ONLINE · usually replies fast</span></div>
+        </div>
+        <div class="chat-log" id="chatLog">
+          <div class="bubble a">Hey 👋 I'm Abbas — a backend engineer from Baghdad. Ask me something below.</div>
+        </div>
+        <div class="chat-asks" id="chatAsks"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section style="padding-top:0">
   <div class="wrap">
     <div class="stats reveal">
@@ -467,8 +531,10 @@
     <h2 class="display reveal" data-d="1">Got a system<br>that needs a <span class="o">backend?</span></h2>
     <p class="sub reveal" data-d="2">I'm always up for hard problems — distributed systems, real-time services, or turning a messy pipeline into something that just works.</p>
     <div class="links reveal" data-d="3">
-      <a class="btn btn--primary" href="https://github.com/3bbasDev" target="_blank" rel="noopener">GitHub @3bbasDev →</a>
-      <a class="btn btn--ghost" href="https://github.com/3bbasDev?tab=repositories" target="_blank" rel="noopener">Browse repositories</a>
+      <a class="btn btn--primary" href="mailto:abbas1995abbe@gmail.com"><span class="ic">✉</span> Email me</a>
+      <a class="btn btn--ghost" href="https://www.linkedin.com/in/abbas-k-radam-ab15a237b/" target="_blank" rel="noopener"><span class="ic">in</span> LinkedIn ↗</a>
+      <a class="btn btn--ghost" href="https://github.com/3bbasDev" target="_blank" rel="noopener"><span class="ic">{ }</span> GitHub ↗</a>
+      <a class="btn btn--ghost" href="cv.html" target="_blank" rel="noopener">Download CV ↓</a>
     </div>
   </div>
 </section>
@@ -580,6 +646,30 @@ addEventListener('mousemove',e=>{
   const x=(e.clientX/innerWidth-.5)*40, y=(e.clientY/innerHeight-.5)*40;
   glowA.style.transform=`translate(${x}px,${y}px)`;
 },{passive:true});
+
+/* ---------- ask-me chat ---------- */
+const QA=[
+  {q:"What's your stack?", a:"Mostly C# / .NET — ASP.NET Core, microservices, WebSockets, EF Core — with Python (FastAPI) for services and ML.NET / scikit-learn for the data side. Elasticsearch when search needs to be fast."},
+  {q:"Where are you based?", a:"Baghdad, Iraq 🇮🇶 — and happy to work remotely across time zones."},
+  {q:"Are you open to work?", a:"Yes — open to backend / microservices roles and freelance. Hit the 'Email me' button below and let's talk."},
+  {q:"What do you build?", a:"Distributed backends: multi-tenant platforms, real-time WebSocket services, search with Elasticsearch, and ML pipelines wired straight into the services that use them."},
+  {q:"How long have you coded?", a:"On GitHub since 2017 — so 8+ years of shipping production .NET and breaking things until they work."},
+  {q:"Favorite kind of problem?", a:"Anything that scales badly. Give me a messy pipeline or a monolith that won't deploy and I'm genuinely happy."}
+];
+const log=document.getElementById('chatLog'), asks=document.getElementById('chatAsks');
+QA.forEach((item,i)=>{
+  const b=document.createElement('button');
+  b.className='qchip'; b.textContent=item.q;
+  b.onclick=()=>answer(i,b);
+  asks.appendChild(b);
+});
+function add(cls,html){const d=document.createElement('div');d.className='bubble '+cls;d.innerHTML=html;log.appendChild(d);log.scrollTop=log.scrollHeight;return d;}
+function answer(i,btn){
+  btn.disabled=true;
+  add('q',QA[i].q);
+  const t=add('typing','<i></i><i></i><i></i>');
+  setTimeout(()=>{t.remove();add('a',QA[i].a);},650+Math.random()*350);
+}
 
 document.getElementById('yr').textContent=new Date().getFullYear();
 </script>
