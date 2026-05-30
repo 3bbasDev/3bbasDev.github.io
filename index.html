@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Abbas Radam — Backend Systems Engineer</title>
-<meta name="description" content="Abbas Radam (@3bbasDev) — Backend & .NET microservices engineer based in Baghdad. Distributed systems, real-time services, ML.NET, Elasticsearch." />
+<title>Abbas Radam — Backend Developer & Project Manager</title>
+<meta name="description" content="Abbas Radam (@3bbasDev) — Senior backend developer & software project manager in Baghdad. .NET & Golang microservices, payment integrations, and production platforms for transport, ports, e-government and fintech." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Spline+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -197,6 +197,19 @@
   .project:hover .parrow{color:var(--amber);transform:translate(6px,-6px)}
   @media(max-width:760px){.project{grid-template-columns:1fr;gap:8px}.project .parrow{display:none}.project .pn{font-size:1.4rem}}
 
+  /* EXPERIENCE timeline */
+  .timeline{position:relative;margin-left:8px;padding-left:38px;border-left:1px solid var(--line)}
+  .tl{position:relative;padding:0 0 44px}
+  .tl:last-child{padding-bottom:0}
+  .tl::before{content:"";position:absolute;left:-45px;top:5px;width:14px;height:14px;border-radius:50%;background:var(--surface);border:2px solid var(--faint);transition:.4s var(--ease)}
+  .tl.in::before{border-color:var(--amber);box-shadow:0 0 0 5px rgba(245,166,35,.14)}
+  .tl .when{font-family:"JetBrains Mono";font-size:.74rem;letter-spacing:.06em;color:var(--amber);margin-bottom:4px}
+  .tl h4{font-family:"Bricolage Grotesque";font-weight:700;font-size:1.3rem;line-height:1.15}
+  .tl .co{color:var(--text);font-weight:600;font-size:.98rem;margin-top:2px}
+  .tl .co .where{color:var(--faint);font-weight:400}
+  .tl p{color:var(--muted);font-size:.98rem;margin-top:8px;max-width:620px}
+  .tl.cur .when::after{content:"● now";margin-left:10px;color:var(--mint);font-size:.7rem}
+
   /* ACHIEVEMENTS */
   .ach-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
   .ach{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px 20px 22px;text-align:center;transition:.4s var(--ease);overflow:hidden}
@@ -283,6 +296,7 @@
       <a href="#journey">Journey</a>
       <a href="#stack">Stack</a>
       <a href="#work">Work</a>
+      <a href="#career">Career</a>
       <a href="#achievements">Achievements</a>
       <a href="#ask">Ask</a>
       <a href="#contact">Contact</a>
@@ -294,20 +308,20 @@
 <header class="hero" id="top">
   <div class="hero-grid"></div>
   <div class="wrap hero-inner">
-    <div class="tag mono eyebrow">Backend Systems Engineer · Baghdad, IRAQ</div>
+    <div class="tag mono eyebrow">Senior Backend Developer · Project Manager · Baghdad, IRAQ</div>
     <h1 class="display">
       <span class="ln"><span>ABBAS</span></span>
       <span class="ln"><span>RAD<em>AM</em></span></span>
     </h1>
-    <p class="lede">I architect <b>distributed backends</b> — .NET microservices, real-time systems, and ML pipelines that hold up under load. <b>“Even when I lose, I'm winning.”</b></p>
+    <p class="lede">I build <b>production backends</b> for transport, ports, e-government and fintech — .NET &amp; Golang microservices, payment integrations, and systems that hold up under real load. <b>“Even when I lose, I'm winning.”</b></p>
     <div class="hero-actions">
       <a class="btn btn--primary" href="#work">View selected work <span>→</span></a>
       <a class="btn btn--ghost" href="cv.html" target="_blank" rel="noopener">Download CV ↓</a>
     </div>
     <div class="hero-meta">
-      <div class="m"><b data-count="8">0</b><span>yrs on GitHub</span></div>
-      <div class="m"><b data-count="28">0</b><span>repositories</span></div>
-      <div class="m"><b data-count="6">0</b><span>languages</span></div>
+      <div class="m"><b data-count="7">0</b><span>yrs experience</span></div>
+      <div class="m"><b data-count="12">0</b><span>systems shipped</span></div>
+      <div class="m"><b data-count="6">0</b><span>roles &amp; companies</span></div>
       <div class="m"><b>C#</b><span>primary stack</span></div>
     </div>
   </div>
@@ -319,8 +333,8 @@
     <div class="about">
       <div class="reveal">
         <span class="mono eyebrow">/ whoami</span>
-        <p class="lead" style="margin-top:22px">A backend engineer who thinks in <mark>services, queues, and data flows</mark> — building systems that stay calm while everything around them scales.</p>
-        <p class="body">Since 2017 I've been shipping production .NET backends: multi-tenant platforms, real-time WebSocket services, Elasticsearch-powered search, and ML.NET pipelines. I care about clean boundaries, predictable deployments, and code that the next engineer can actually read.</p>
+        <p class="lead" style="margin-top:22px">A backend developer &amp; project manager who thinks in <mark>services, integrations, and data flows</mark> — building platforms that stay calm while everything around them scales.</p>
+        <p class="body">Since 2018 I've shipped production systems for Iraqi institutions and companies — national transport management, sea ports, e-government, e-invoicing and payments. Along the way I've led teams as a software project manager and team lead. I care about clean boundaries, reliable integrations, and code the next engineer can actually read.</p>
       </div>
       <div class="reveal" data-d="2">
         <div class="portrait">
@@ -331,9 +345,9 @@
         <div class="idcard">
           <div class="dots"><i></i><i></i><i></i></div>
           <div class="row"><span class="k">handle</span><span class="v">@3bbasDev</span></div>
-          <div class="row"><span class="k">role</span><span class="v">Backend / Microservices Eng.</span></div>
+          <div class="row"><span class="k">role</span><span class="v">Sr. Backend Dev · PM</span></div>
           <div class="row"><span class="k">location</span><span class="v">Baghdad, IQ</span></div>
-          <div class="row"><span class="k">focus</span><span class="v">.NET · Python · Distributed Sys</span></div>
+          <div class="row"><span class="k">focus</span><span class="v">.NET · Golang · Microservices</span></div>
           <div class="row"><span class="k">status</span><span class="v acc">● open to collaborate</span></div>
         </div>
       </div>
@@ -364,17 +378,17 @@
           <div class="layer" data-layer="2">
             <div class="lt">Layer 03 — Services</div>
             <div class="ln">Microservices</div>
-            <div class="lstack">C# · FastAPI · message-driven</div>
+            <div class="lstack">C# · Golang · gRPC · message-driven</div>
           </div>
           <div class="layer" data-layer="3">
             <div class="lt">Layer 04 — Data</div>
-            <div class="ln">Storage &amp; Search</div>
-            <div class="lstack">SQL · Elasticsearch · EF Core</div>
+            <div class="ln">Storage, Cache &amp; Search</div>
+            <div class="lstack">PostgreSQL · Redis · Elasticsearch</div>
           </div>
           <div class="layer" data-layer="4">
-            <div class="lt">Layer 05 — Intelligence</div>
-            <div class="ln">ML &amp; Pipelines</div>
-            <div class="lstack">ML.NET · scikit-learn · preprocessing</div>
+            <div class="lt">Layer 05 — Integrations</div>
+            <div class="ln">Payments &amp; Gov</div>
+            <div class="lstack">Payment gateways · POS · bank &amp; e-gov</div>
           </div>
         </div>
       </div>
@@ -392,17 +406,17 @@
         <div class="step" data-step="2">
           <span class="num">03 / SERVICES</span>
           <h3>Small services, big systems.</h3>
-          <p>Independent C# and Python (FastAPI) microservices, each owning its domain and talking over well-defined contracts. Deploy one without waking the others.</p>
+          <p>Independent C# and Golang microservices, each owning its domain and talking over gRPC and well-defined contracts. Deploy one without waking the others.</p>
         </div>
         <div class="step" data-step="3">
           <span class="num">04 / DATA</span>
           <h3>Memory that scales.</h3>
-          <p>Relational stores via EF Core for truth, Elasticsearch for speed. Structured for fast reads, honest writes, and search that returns before you blink.</p>
+          <p>PostgreSQL for truth, Redis for speed, Elasticsearch for search. Structured for fast reads, honest writes, and queries that return before you blink.</p>
         </div>
         <div class="step" data-step="4">
-          <span class="num">05 / INTELLIGENCE</span>
-          <h3>Backends that learn.</h3>
-          <p>ML.NET and Python pipelines for prediction, classification, and recommendations — data preprocessing to trained model, wired straight into the services that use them.</p>
+          <span class="num">05 / INTEGRATIONS</span>
+          <h3>Where money &amp; government meet.</h3>
+          <p>Payment gateways, POS, bank integrations and e-government links — the hardest, highest-stakes part of every platform I've shipped, from e-invoicing to national transport.</p>
         </div>
       </div>
     </div>
@@ -417,12 +431,12 @@
       <p>The tools I reach for, grouped by where they live in the system.</p>
     </div>
     <div class="skills">
-      <div class="skill reveal" data-d="1"><h4><span class="ic">{ }</span>Languages</h4><div class="chips"><span class="chip">C#</span><span class="chip">Python</span><span class="chip">Java</span><span class="chip">C++</span><span class="chip">Kotlin</span><span class="chip">SQL</span></div></div>
-      <div class="skill reveal" data-d="2"><h4><span class="ic">&lt;/&gt;</span>Backend</h4><div class="chips"><span class="chip">ASP.NET Core</span><span class="chip">.NET</span><span class="chip">Microservices</span><span class="chip">REST APIs</span><span class="chip">FastAPI</span><span class="chip">WebSockets</span></div></div>
-      <div class="skill reveal" data-d="3"><h4><span class="ic">[ ]</span>Data &amp; Search</h4><div class="chips"><span class="chip">Elasticsearch</span><span class="chip">Entity Framework</span><span class="chip">SQL Server</span><span class="chip">Data Modeling</span></div></div>
-      <div class="skill reveal" data-d="1"><h4><span class="ic">∑</span>ML &amp; Data</h4><div class="chips"><span class="chip">ML.NET</span><span class="chip">scikit-learn</span><span class="chip">Regression</span><span class="chip">NLP / Text</span><span class="chip">Recommenders</span></div></div>
-      <div class="skill reveal" data-d="2"><h4><span class="ic">⟳</span>DevOps</h4><div class="chips"><span class="chip">Docker</span><span class="chip">CI/CD</span><span class="chip">GitHub Actions</span><span class="chip">Linux</span><span class="chip">SSH Deploy</span><span class="chip">Supervisor</span></div></div>
-      <div class="skill reveal" data-d="3"><h4><span class="ic">◇</span>Craft</h4><div class="chips"><span class="chip">Design Patterns</span><span class="chip">Data Structures</span><span class="chip">Problem Solving</span><span class="chip">Clean Architecture</span></div></div>
+      <div class="skill reveal" data-d="1"><h4><span class="ic">{ }</span>Languages</h4><div class="chips"><span class="chip">C#</span><span class="chip">Python</span><span class="chip">Golang</span><span class="chip">JavaScript</span><span class="chip">Solidity</span><span class="chip">SQL</span></div></div>
+      <div class="skill reveal" data-d="2"><h4><span class="ic">&lt;/&gt;</span>Backend</h4><div class="chips"><span class="chip">.NET / ASP.NET</span><span class="chip">Microservices</span><span class="chip">REST APIs</span><span class="chip">gRPC</span><span class="chip">API Gateway</span><span class="chip">WebSockets</span></div></div>
+      <div class="skill reveal" data-d="3"><h4><span class="ic">[ ]</span>Data &amp; Cache</h4><div class="chips"><span class="chip">PostgreSQL</span><span class="chip">Redis</span><span class="chip">Elasticsearch</span><span class="chip">Caching</span><span class="chip">EF Core</span></div></div>
+      <div class="skill reveal" data-d="1"><h4><span class="ic">∑</span>Platforms</h4><div class="chips"><span class="chip">Blockchain</span><span class="chip">Google Firebase</span><span class="chip">Flutter</span><span class="chip">Payment Gateway</span><span class="chip">POS</span></div></div>
+      <div class="skill reveal" data-d="2"><h4><span class="ic">⟳</span>DevOps</h4><div class="chips"><span class="chip">Docker</span><span class="chip">Jenkins</span><span class="chip">CI/CD</span><span class="chip">Linux</span><span class="chip">Git</span></div></div>
+      <div class="skill reveal" data-d="3"><h4><span class="ic">◇</span>Domains &amp; Craft</h4><div class="chips"><span class="chip">ERP</span><span class="chip">CRM</span><span class="chip">Ticketing Systems</span><span class="chip">Agile</span><span class="chip">Clean Code</span></div></div>
     </div>
   </div>
 </section>
@@ -430,51 +444,99 @@
 <section id="work">
   <div class="wrap">
     <div class="shead reveal">
-      <span class="mono eyebrow">/ selected repositories</span>
-      <h2 class="display">Things I've built.</h2>
-      <p>A slice of public work — distributed systems, real-time services, and machine learning.</p>
+      <span class="mono eyebrow">/ selected work</span>
+      <h2 class="display">Systems I've shipped.</h2>
+      <p>Production platforms for Iraqi institutions and companies — transport, sea ports, e-government, e-invoicing and payments.</p>
     </div>
     <div class="projects">
-      <a class="project reveal" href="https://github.com/3bbasDev?tab=repositories" target="_blank" rel="noopener">
+      <div class="project reveal">
         <span class="pn">01</span>
-        <div><div class="pt">GiglaSync <span class="lang">C# · PYTHON</span></div><div class="pd">Multi-service platform: .NET microservices with a FastAPI document-processing service, role-based permissions, multi-tenant reporting and export pipelines.</div></div>
-        <span class="parrow">↗</span>
-      </a>
-      <a class="project reveal" href="https://github.com/3bbasDev/Microservices" target="_blank" rel="noopener">
+        <div><div class="pt">Nafarat — SCPTA <span class="lang">PROJECT LEAD</span></div><div class="pd">National private-transport management platform for Iraq's SCPTA. Single-window system, driver mobile app, garage management, ticketing, violations app, Sadid e-bill integration and POS e-payment.</div></div>
+        <span class="parrow">↳</span>
+      </div>
+      <div class="project reveal">
         <span class="pn">02</span>
-        <div><div class="pt">Microservices <span class="lang">C#</span></div><div class="pd">A microservices architecture in .NET — independent services with clear contracts and message-driven communication.</div></div>
-        <span class="parrow">↗</span>
-      </a>
-      <a class="project reveal" href="https://github.com/3bbasDev/WebSocketService" target="_blank" rel="noopener">
+        <div><div class="pt">SCMT Iraq <span class="lang">BASRA · MARINE</span></div><div class="pd">Automation of marine-agency operations: delivery orders, e-manifest, ship tracking, e-billing, accounting and payment gateway — end to end.</div></div>
+        <span class="parrow">↳</span>
+      </div>
+      <div class="project reveal">
         <span class="pn">03</span>
-        <div><div class="pt">WebSocketService <span class="lang">C#</span></div><div class="pd">Real-time WebSocket service pushing live state to connected clients with low-latency bidirectional messaging.</div></div>
-        <span class="parrow">↗</span>
-      </a>
-      <a class="project reveal" href="https://github.com/3bbasDev/Elastic" target="_blank" rel="noopener">
+        <div><div class="pt">Iraqi Harbor System <span class="lang">MICROSERVICES</span></div><div class="pd">Interconnected microservices managing all of Iraq's ports — accounting, user management, ship trips &amp; navigation, e-billing, ship tracking and yard management.</div></div>
+        <span class="parrow">↳</span>
+      </div>
+      <div class="project reveal">
         <span class="pn">04</span>
-        <div><div class="pt">Elastic <span class="lang">C#</span></div><div class="pd">Elasticsearch integration in .NET — indexing and fast full-text search wired into a C# service layer.</div></div>
-        <span class="parrow">↗</span>
-      </a>
-      <a class="project reveal" href="https://github.com/3bbasDev/Data-Preprocessing" target="_blank" rel="noopener">
+        <div><div class="pt">Sadid <span class="lang">FINTECH</span></div><div class="pd">Electronic invoice-payment platform that simplifies invoicing and payment across many projects — payment gateway, POS e-payment and bank integrations.</div></div>
+        <span class="parrow">↳</span>
+      </div>
+      <div class="project reveal">
         <span class="pn">05</span>
-        <div><div class="pt">Data-Preprocessing <span class="lang">PYTHON</span></div><div class="pd">An ML preprocessing pipeline: handling missing values, encoding categorical features, and producing clean train/test splits.</div></div>
-        <span class="parrow">↗</span>
-      </a>
-      <a class="project reveal" href="https://github.com/3bbasDev?tab=repositories&q=ML" target="_blank" rel="noopener">
+        <div><div class="pt">Masa — E-Government <span class="lang">.NET · FIREBASE</span></div><div class="pd">A platform to move state transactions and procedures fully electronic, built on dynamic forms and dynamic flows. .NET with PostgreSQL, Redis, Firebase and in-memory cache.</div></div>
+        <span class="parrow">↳</span>
+      </div>
+      <div class="project reveal">
         <span class="pn">06</span>
-        <div><div class="pt">ML.NET Suite <span class="lang">C#</span></div><div class="pd">PriceMLSimple, TextMlSimple &amp; MovesUserRatingML — price prediction, text classification, and a movie recommendation model built on ML.NET.</div></div>
-        <span class="parrow">↗</span>
-      </a>
-      <a class="project reveal" href="https://github.com/3bbasDev/Fluent_Builder" target="_blank" rel="noopener">
+        <div><div class="pt">RAHA Roadside Assistance <span class="lang">CRM · MOBILE</span></div><div class="pd">On-demand roadside services — oil change, assistance and more. CRM website, client mobile app, and a management panel for orders.</div></div>
+        <span class="parrow">↳</span>
+      </div>
+      <div class="project reveal">
         <span class="pn">07</span>
-        <div><div class="pt">Fluent_Builder <span class="lang">C#</span></div><div class="pd">A clean, fluent implementation of the Builder pattern — readable object construction without the constructor sprawl.</div></div>
-        <span class="parrow">↗</span>
-      </a>
-      <a class="project reveal" href="https://github.com/3bbasDev/todo-app" target="_blank" rel="noopener">
+        <div><div class="pt">ERP SID <span class="lang">ERP</span></div><div class="pd">Full ERP suite: accounting, sales, purchases, clients, multi-warehouse inventory with real-time tracking, and item/pricing management.</div></div>
+        <span class="parrow">↳</span>
+      </div>
+      <div class="project reveal">
         <span class="pn">08</span>
-        <div><div class="pt">todo-app <span class="lang">C++</span></div><div class="pd">A todo application experiment backed by blockchain — exploring immutable, verifiable task state.</div></div>
-        <span class="parrow">↗</span>
-      </a>
+        <div><div class="pt">Gold Market <span class="lang">.NET · BLOCKCHAIN</span></div><div class="pd">Buy, sell and mortgage gold, linked to multiple banks. Built on .NET with PostgreSQL and Redis — plus a Solidity/blockchain track for verifiable state.</div></div>
+        <span class="parrow">↳</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="career">
+  <div class="wrap">
+    <div class="shead reveal">
+      <span class="mono eyebrow">/ where I've worked</span>
+      <h2 class="display">The career so far.</h2>
+      <p>From backend developer to team lead to project manager — across fintech, e-government and logistics in Iraq.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl reveal cur">
+        <div class="when">04/2024 — Present</div>
+        <h4>Senior Back End Developer</h4>
+        <div class="co">Super Cell <span class="where">· Baghdad, Iraq</span></div>
+        <p>Building and scaling production backend services — microservices, integrations and the systems behind them.</p>
+      </div>
+      <div class="tl reveal">
+        <div class="when">03/2023 — 04/2024</div>
+        <h4>Team Lead Manager</h4>
+        <div class="co">Digital Logic <span class="where">· Baghdad</span></div>
+        <p>Led an engineering team end to end — architecture decisions, delivery, and keeping the team shipping.</p>
+      </div>
+      <div class="tl reveal">
+        <div class="when">05/2021 — 03/2023</div>
+        <h4>Software Project Manager</h4>
+        <div class="co">Qi Card <span class="where">· Baghdad</span></div>
+        <p>Managed software projects for one of Iraq's largest fintech / payment providers — planning, scope and delivery.</p>
+      </div>
+      <div class="tl reveal">
+        <div class="when">05/2020 — 05/2021</div>
+        <h4>Team Leader</h4>
+        <div class="co">Enjaz LLC <span class="where">· Baghdad</span></div>
+        <p>Stepped up to lead the team while continuing to build, mentoring developers and owning delivery.</p>
+      </div>
+      <div class="tl reveal">
+        <div class="when">05/2019 — 05/2021</div>
+        <h4>Back End Developer</h4>
+        <div class="co">Enjaz LLC <span class="where">· Baghdad</span></div>
+        <p>Designed and built backend services and APIs that powered the company's products.</p>
+      </div>
+      <div class="tl reveal">
+        <div class="when">11/2018 — 05/2019</div>
+        <h4>Back End Developer</h4>
+        <div class="co">Khaleej Almerjan <span class="where">· Baghdad</span></div>
+        <p>First professional role out of university — shipping backend features in production.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -506,7 +568,7 @@
           <div class="who"><b>Abbas Radam</b><span>● ONLINE · usually replies fast</span></div>
         </div>
         <div class="chat-log" id="chatLog">
-          <div class="bubble a">Hey 👋 I'm Abbas — a backend engineer from Baghdad. Ask me something below.</div>
+          <div class="bubble a">Hey 👋 I'm Abbas — a backend developer &amp; project manager from Baghdad. Ask me something below.</div>
         </div>
         <div class="chat-asks" id="chatAsks"></div>
       </div>
@@ -517,9 +579,9 @@
 <section style="padding-top:0">
   <div class="wrap">
     <div class="stats reveal">
-      <div class="stat"><b data-count="8">0</b><span>Years shipping</span></div>
-      <div class="stat"><b data-count="28">0</b><span>Public repos</span></div>
-      <div class="stat"><b data-count="18">0</b><span>Followers</span></div>
+      <div class="stat"><b data-count="7">0</b><span>Years shipping</span></div>
+      <div class="stat"><b data-count="12">0</b><span>Systems built</span></div>
+      <div class="stat"><b data-count="6">0</b><span>Roles &amp; teams</span></div>
       <div class="stat"><b data-count="6">0</b><span>Languages</span></div>
     </div>
   </div>
@@ -561,7 +623,7 @@ const ACH = [
   {e:"🧩", t:"Microservice Maestro",  tier:"x3", d:"Designed and shipped multiple independent .NET services.",      c1:"#5BE3A6",c2:"#0f766e"},
   {e:"📡", t:"Real-Time Wrangler",    tier:"",   d:"Built low-latency WebSocket systems pushing live state.",       c1:"#7AA2FF",c2:"#1d4ed8"},
   {e:"🔎", t:"Search Smith",          tier:"",   d:"Wired Elasticsearch into production for instant search.",       c1:"#fcd34d",c2:"#a16207"},
-  {e:"🤖", t:"ML Pioneer",            tier:"x3", d:"Trained ML.NET models: prediction, NLP, recommendation.",       c1:"#c084fc",c2:"#6b21a8"},
+  {e:"💳", t:"Payment Plumber",       tier:"x4", d:"Built payment gateways, POS and bank integrations end to end.", c1:"#c084fc",c2:"#6b21a8"},
   {e:"🏛️", t:"The Architect",         tier:"",   d:"Built a multi-tenant platform with role-based permissions.",    c1:"#F5A623",c2:"#92400e"},
   {e:"🐳", t:"Ship It",               tier:"x5", d:"Five+ years of CI/CD deploys to live production servers.",      c1:"#38bdf8",c2:"#075985"},
   {e:"🦉", t:"Night Owl",             tier:"",   d:"Commits logged at every hour the clock has to offer.",          c1:"#94a3b8",c2:"#334155"},
@@ -620,7 +682,7 @@ const co=new IntersectionObserver((es)=>{
     const el=e.target, end=+el.dataset.count; let t0=null;
     const step=ts=>{if(!t0)t0=ts;const p=Math.min((ts-t0)/1100,1);
       el.textContent=Math.floor((1-Math.pow(1-p,3))*end)+(end>=8&&end<10&&el.textContent.includes('+')?'':'');
-      if(p<1)requestAnimationFrame(step);else el.textContent=end+(el.dataset.count==='8'?'+':'');};
+      if(p<1)requestAnimationFrame(step);else el.textContent=end+(el.dataset.count==='7'?'+':'');};
     requestAnimationFrame(step); co.unobserve(el);
   });
 },{threshold:.6});
@@ -649,12 +711,12 @@ addEventListener('mousemove',e=>{
 
 /* ---------- ask-me chat ---------- */
 const QA=[
-  {q:"What's your stack?", a:"Mostly C# / .NET — ASP.NET Core, microservices, WebSockets, EF Core — with Python (FastAPI) for services and ML.NET / scikit-learn for the data side. Elasticsearch when search needs to be fast."},
+  {q:"What's your stack?", a:"Mostly C# / .NET — microservices, gRPC, REST and API gateways — plus Golang for services. PostgreSQL and Redis for data and cache, Elasticsearch for search, and Flutter / Firebase when there's a mobile side."},
   {q:"Where are you based?", a:"Baghdad, Iraq 🇮🇶 — and happy to work remotely across time zones."},
-  {q:"Are you open to work?", a:"Yes — open to backend / microservices roles and freelance. Hit the 'Email me' button below and let's talk."},
-  {q:"What do you build?", a:"Distributed backends: multi-tenant platforms, real-time WebSocket services, search with Elasticsearch, and ML pipelines wired straight into the services that use them."},
-  {q:"How long have you coded?", a:"On GitHub since 2017 — so 8+ years of shipping production .NET and breaking things until they work."},
-  {q:"Favorite kind of problem?", a:"Anything that scales badly. Give me a messy pipeline or a monolith that won't deploy and I'm genuinely happy."}
+  {q:"Are you open to work?", a:"Yes — open to senior backend / project-management roles and freelance. Hit the 'Email me' button below and let's talk."},
+  {q:"What do you build?", a:"Production platforms for real institutions: national transport management, sea ports, e-government, ERP, and e-invoicing / payment systems with POS and bank integrations."},
+  {q:"How long have you coded?", a:"Professionally since 2018 — 7+ years across backend developer, team lead and software project manager roles."},
+  {q:"Favorite kind of problem?", a:"Payment and integration problems — gateways, POS, banks, government systems. The high-stakes plumbing where things have to be exactly right."}
 ];
 const log=document.getElementById('chatLog'), asks=document.getElementById('chatAsks');
 QA.forEach((item,i)=>{
